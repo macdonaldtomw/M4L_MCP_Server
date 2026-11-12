@@ -1,0 +1,22 @@
+[project]
+name = "m4l-mcp"
+version = "0.1.0"
+description = "MCP server for editing and debugging Max for Live devices (.amxd) and Max patches on disk"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.2",
+    "pillow>=10.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+m4l-mcp = "m4l_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["m4l_mcp"]
